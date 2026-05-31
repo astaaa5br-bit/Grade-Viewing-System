@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Attendance Dashboard</h1>
+
+<div class="dashboard">
+
+    <div class="card">
+        <h3>Total Students</h3>
+        <p id="totalStudents">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Present</h3>
+        <p id="presentCount">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Absent</h3>
+        <p id="absentCount">0</p>
+    </div>
+
+</div>
+
+<h2>Add Attendance</h2>
+
+<input type="text" id="studentName" placeholder="Student Name">
+<input type="date" id="attendanceDate">
+
+<select id="status">
+    <option>Present</option>
+    <option>Absent</option>
+</select>
+
+<button onclick="addAttendance()">Add</button>
+
+<br><br>
+
+<input type="text" id="searchInput" placeholder="Search Student" onkeyup="searchStudent()">
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="attendanceTable"></tbody>
+</table>
+
+<script src="script.js"></script>
+
+</body>
+</html>
